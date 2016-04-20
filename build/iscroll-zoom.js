@@ -297,9 +297,6 @@ function IScroll (el, options) {
 		snapThreshold: 0.334,
 
 // INSERT POINT: OPTIONS
-		disablePointer : !utils.hasPointer,
-		disableTouch : utils.hasPointer || !utils.hasTouch,
-		disableMouse : utils.hasPointer || utils.hasTouch,
 		startX: 0,
 		startY: 0,
 		scrollY: true,
@@ -986,6 +983,7 @@ IScroll.prototype = {
 
 		return { x: x, y: y };
 	},
+
 	_initIndicators: function () {
 		var interactive = this.options.interactiveScrollbars,
 			customStyle = typeof this.options.scrollbars != 'string',

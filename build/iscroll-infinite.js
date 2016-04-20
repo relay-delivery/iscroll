@@ -295,9 +295,6 @@ function IScroll (el, options) {
 		deceleration: 0.004,
 
 // INSERT POINT: OPTIONS
-		disablePointer : !utils.hasPointer,
-		disableTouch : utils.hasPointer || !utils.hasTouch,
-		disableMouse : utils.hasPointer || utils.hasTouch,
 		startX: 0,
 		startY: 0,
 		scrollY: true,
@@ -974,6 +971,7 @@ IScroll.prototype = {
 
 		return { x: x, y: y };
 	},
+
 	_initWheel: function () {
 		utils.addEvent(this.wrapper, 'wheel', this);
 		utils.addEvent(this.wrapper, 'mousewheel', this);

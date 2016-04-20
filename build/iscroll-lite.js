@@ -288,9 +288,6 @@ function IScroll (el, options) {
 	this.options = {
 
 // INSERT POINT: OPTIONS
-		disablePointer : !utils.hasPointer,
-		disableTouch : utils.hasPointer || !utils.hasTouch,
-		disableMouse : utils.hasPointer || utils.hasTouch,
 		startX: 0,
 		startY: 0,
 		scrollY: true,
@@ -914,6 +911,7 @@ IScroll.prototype = {
 
 		return { x: x, y: y };
 	},
+
 	_animate: function (destX, destY, duration, easingFn) {
 		var that = this,
 			startX = this.x,
